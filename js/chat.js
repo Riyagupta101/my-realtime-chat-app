@@ -10,11 +10,11 @@ class ChatManager {
         
         // Sample data
         this.contacts = [
-            { id: 1, name: "Aisha Sharma", avatar: "AS", online: true, lastMessage: "Sure! I'll send you the documents shortly.", lastTime: "9:46 AM", muted: false },
-            { id: 2, name: "Rohan Mehta", avatar: "RM", online: true, lastMessage: "The meeting is scheduled for tomorrow.", lastTime: "Yesterday", muted: false },
+            { id: 1, name: "Hrithik Gupta", avatar: "AS", online: true, lastMessage: "Sure! I'll send you the documents shortly.", lastTime: "9:46 AM", muted: false },
+            { id: 2, name: "Nikhil Soni", avatar: "RM", online: true, lastMessage: "The meeting is scheduled for tomorrow.", lastTime: "Yesterday", muted: false },
             { id: 3, name: "Priya Patel", avatar: "PP", online: false, lastMessage: "Thanks for your help with the project!", lastTime: "Monday", muted: false },
-            { id: 4, name: "David Kim", avatar: "DK", online: true, lastMessage: "Let's catch up next week.", lastTime: "Sunday", muted: true },
-            { id: 5, name: "Emily Chen", avatar: "EC", online: false, lastMessage: "The files have been uploaded.", lastTime: "Last week", muted: false }
+            { id: 4, name: "Naina Gupta", avatar: "DK", online: true, lastMessage: "Let's catch up next week.", lastTime: "Sunday", muted: true },
+            { id: 5, name: "Deeksha Gupta", avatar: "EC", online: false, lastMessage: "The files have been uploaded.", lastTime: "Last week", muted: false }
         ];
         
         this.initialMessages = [
