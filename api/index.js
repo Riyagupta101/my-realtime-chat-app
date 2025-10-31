@@ -28,15 +28,34 @@ app.get('*', (req, res) => {
 
 // MongoDB connection
 //const MONGODB_URI = 'mongodb+srv://RiyaGupta:MP36mp6787@cluster0.5mvc7qr.mongodb.net/chatdb?retryWrites=true&w=majority';
+// const MONGODB_URI = process.env.MONGODB_URI;
+
+
+// mongoose.connect(MONGODB_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+// })
+// .then(() => console.log('✅ Connected to MongoDB Atlas'))
+// .catch(err => console.error('❌ MongoDB connection error:', err));
+
+// MongoDB connection
 const MONGODB_URI = process.env.MONGODB_URI;
 
+if (!MONGODB_URI) {
+  console.error('❌ MONGODB_URI is missing! Make sure it is set in Vercel Environment Variables.');
+  process.exit(1);
+}
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 })
-.then(() => console.log('✅ Connected to MongoDB Atlas'))
-.catch(err => console.error('❌ MongoDB connection error:', err));
+.then(() => console.log('✅ Successfully connected to MongoDB Atlas'))
+.catch((err) => {
+  console.error('❌ MongoDB connection error:', err.message);
+  process.exit(1);
+});
+
 
 // User Schema
 const userSchema = new mongoose.Schema({
