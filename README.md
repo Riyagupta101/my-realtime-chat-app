@@ -1,77 +1,140 @@
-💬 Real-Time Chat Web App with Notifications
+💬 Real-Time Chat App
 
-Author: Riya Gupta
-Assignment For: GIX Technology
+A fully-responsive real-time chat application built with Node.js, Socket.IO, and MongoDB Atlas, featuring secure authentication, notifications, dark mode, and a modern UI.
 
-🌟 Overview
+🚀 Tech Stack
+Layer	Technology
+Frontend	HTML, CSS, JavaScript
+Backend	Node.js, Express.js
+Real-Time Communication	Socket.IO
+Database	MongoDB Atlas (Mongoose ORM)
+Authentication	JWT + bcryptjs
+Notifications	Browser + In-app Alerts
+📂 Project Structure
+Chat-app/
+├── public/
+│   ├── index.html
+│   ├── css/
+│   │   ├── style.css
+│   │   └── responsive.css
+│   └── js/
+│       ├── app.js
+│       ├── chat.js
+│       ├── notification.js
+│       └── utils.js
+├── server.js
+├── package.json
+└── README.md
 
-Welcome to the Real-Time Chat Web App!
-This application allows users to chat instantly with each other while receiving real-time notifications for incoming messages. Perfect for seamless communication and staying connected.
+✅ Core Features
+🔐 Authentication
 
-✨ Features
+Secure JWT Login + Registration
 
-🗨 Real-Time Messaging: Send and receive messages instantly.
+Password hashing with bcryptjs
 
-🔔 Push Notifications: Get notified for new messages.
+Auto-signin using localStorage
 
-🔐 User Authentication (Optional): Secure login and registration.
+💬 Real-Time Messaging
 
-📱 Responsive Design: Works perfectly on desktop & mobile devices.
+Instant delivery using Socket.IO
 
-🛠 Technologies Used
+Typing indicators
 
-Frontend: HTML, CSS, JavaScript
+Online/Offline status
 
-Backend: Node.js, Express.js
+Chat history stored in MongoDB
 
-Real-Time Communication: Socket.io
+Read receipt support
 
-Authentication & Security: JWT, bcrypt.js
+🎨 UI & UX
 
-Server: Node.js HTTP Server
+Clean and modern chat UI
 
-Database (Optional): In-memory storage (can be upgraded to MongoDB/SQL)
+Fully responsive (mobile + desktop)
 
-🚀 Installation
+Smooth transitions & animations
 
-Clone the repository:
+Dark Mode toggle
 
-git clone https://github.com/Riyagupta101/Chat-app.git
-cd Chat-app
+Media Grid view for attachments
 
+🔔 Notifications
 
-Install dependencies:
+Browser push notifications
 
+In-app toast messages
+
+Optional sound alerts
+
+⚙️ Setup & Installation
+Prerequisites
+
+✅ Node.js Installed
+✅ MongoDB Atlas Account (Free Tier works)
+
+1️⃣ Clone the Repo
+git clone https://github.com/<your-username>/chat-app.git
+cd chat-app
+
+2️⃣ Install Dependencies
 npm install
 
+3️⃣ Configure MongoDB
 
-Start the server:
+Edit server.js and update:
+
+const MONGODB_URI = "YOUR_MONGODB_ATLAS_CONNECTION_URL";
+
+
+Tip: Prefer using an .env file for production.
+
+4️⃣ Start the Server
+npm start
+
+
+or
 
 node server.js
 
-
-Open your browser and visit:
-
+5️⃣ Open in Browser
 http://localhost:3000
 
-📝 Usage
+🧪 Testing the App
 
-Register or log in (if authentication is implemented).
+✔ Register/Login new accounts
+✔ Use multi-tab or multi-device for real-time test
+✔ Click different contacts to load chat history
+✔ Test dark mode + notifications + emojis
+✔ File upload UI (extends later)
 
-Open the chat window to start messaging in real-time.
+🔒 Security Notes
 
-Receive instant notifications for new messages.
+✅ Passwords hashed using bcryptjs
+✅ JWT expiration applied
+✅ CORS enabled
+❌ Do NOT commit real MongoDB credentials to GitHub
 
-💡 Future Improvements
+📌 Roadmap (Upcoming Enhancements)
+Feature	Status
+File sharing: images, PDFs, videos	In progress
+Delete for everyone + undo message	✅ Completed
+Cloud file storage (Cloudinary)	Planned
+Last message preview in sidebar	✅ Added
+User search + chat search	Planned
+🛠️ Scripts
+npm install express socket.io mongoose bcryptjs jsonwebtoken cors #install dependencies 
+npm start     # run production server
 
-Store chat history in a database.
+🤝 Contribution
 
-Add group chats and file sharing.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to improve.
 
-Implement browser push notifications for better UX.
+📜 License
 
-Enhance UI/UX with themes, emojis, and custom avatars.
+This project is licensed under the MIT License.
 
-📌 Author
+👤 Developer
 
-Riya Gupta – GIX Technology Assignment
+Riya Gupta
+📍 India
