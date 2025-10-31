@@ -27,7 +27,9 @@ app.get('*', (req, res) => {
 });
 
 // MongoDB connection
-const MONGODB_URI = 'mongodb+srv://RiyaGupta:MP36mp6787@cluster0.5mvc7qr.mongodb.net/chatdb?retryWrites=true&w=majority';
+//const MONGODB_URI = 'mongodb+srv://RiyaGupta:MP36mp6787@cluster0.5mvc7qr.mongodb.net/chatdb?retryWrites=true&w=majority';
+const MONGODB_URI = process.env.MONGODB_URI;
+
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
