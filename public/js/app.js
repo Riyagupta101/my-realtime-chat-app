@@ -1,3 +1,5 @@
+const socket = io();
+window.chatApp = { socket };
 class ChatApp {
     constructor() {
         this.darkMode = false;

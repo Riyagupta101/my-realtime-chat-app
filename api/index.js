@@ -20,7 +20,11 @@ const io = socketIo(server, {
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+});
 
 // MongoDB connection
 const MONGODB_URI = 'mongodb+srv://RiyaGupta:MP36mp6787@cluster0.5mvc7qr.mongodb.net/chatdb?retryWrites=true&w=majority';
